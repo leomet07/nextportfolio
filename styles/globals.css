@@ -37,3 +37,8 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+#navbar_container {
+	height: 50px;
+	margin-top: 20px;
+}

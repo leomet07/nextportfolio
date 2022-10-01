@@ -1,7 +1,9 @@
 .main {
-	padding-top: 120px;
-	outline: 1px solid red;
-	min-height: 100vh;
+	/* Set the minimum height to be the entire page except for the navbar and its margin */
+	min-height: calc(100vh - (50px + 20px));
+
+	width: 100%;
+	padding-top: 20px;
 }
 
 .title {

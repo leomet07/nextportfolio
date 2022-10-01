@@ -1,0 +1,16 @@
+.main {
+	padding-top: 120px;
+	outline: 1px solid red;
+	min-height: 100vh;
+}
+
+.title {
+	font-size: 3rem;
+	margin-bottom: 15px;
+}
+
+.main p {
+	font-size: 1.25rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

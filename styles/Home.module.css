@@ -16,3 +16,23 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+@media (max-width: 440px) {
+	.title {
+		font-size: 2.5rem;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 340px) {
+	.title {
+		font-size: 2.25rem;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 305px) {
+	.title {
+		font-size: 2rem;
+		margin-bottom: 15px;
+	}
+}

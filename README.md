@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 The inspiration for this site was [kevinthomas.codes](https://kevinthomas.codes/)
 
-All source code written myself.
+No source code from the inspiration was used. All code source was and is newly written.

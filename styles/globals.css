@@ -9,16 +9,6 @@
 	font-weight: 800;
 	src: url("/fonts/Ubuntu/Ubuntu-Bold.ttf") format("truetype");
 }
-@font-face {
-	font-family: "Ubuntu";
-	font-weight: 600;
-	src: url("/fonts/Ubuntu/Ubuntu-Medium.ttf") format("truetype");
-}
-@font-face {
-	font-family: "Ubuntu";
-	font-weight: 200;
-	src: url("/fonts/Ubuntu/Ubuntu-Light.ttf") format("truetype");
-}
 
 html,
 body {

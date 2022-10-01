@@ -1,6 +1,6 @@
 #navbar_container {
 	width: 100%;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	height: 100%;
 	max-height: 50px;
 	display: flex;
@@ -12,7 +12,7 @@
 
 #navbar {
 	width: 50%;
-	min-width: 220px;
+	min-width: 280px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -20,4 +20,19 @@
 
 .link_container {
 	text-decoration: underline;
+}
+
+@media (max-width: 550px) {
+	#navbar_container {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 370px) {
+	#navbar {
+		min-width: 100px;
+	}
+	.additional_link {
+		display: none;
+	}
 }

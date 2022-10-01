@@ -9,13 +9,25 @@ function Navbar() {
 				<div className={styles.link_container}>
 					<Link href="/">/</Link>
 				</div>
-				<div className={styles.link_container}>
+				<div
+					className={
+						styles.link_container + " " + styles.additional_link
+					}
+				>
 					<Link href="/projects">/projects</Link>
 				</div>
-				<div className={styles.link_container}>
+				<div
+					className={
+						styles.link_container + " " + styles.additional_link
+					}
+				>
 					<Link href="/jobs">/jobs</Link>
 				</div>
-				<div className={styles.link_container}>
+				<div
+					className={
+						styles.link_container + " " + styles.additional_link
+					}
+				>
 					<Link href="/donate">/donate</Link>
 				</div>
 			</nav>

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
+import { SiGithub } from "react-icons/si";
+
 function Navbar() {
 	return (
 		<div id={styles.navbar_container}>
@@ -17,7 +19,11 @@ function Navbar() {
 					<Link href="/donate">/donate</Link>
 				</div>
 			</nav>
-			<div id={styles.socials}>GH</div>
+			<div id={styles.socials}>
+				<a href="https://github.com/leomet07">
+					<SiGithub />
+				</a>
+			</div>
 		</div>
 	);
 }

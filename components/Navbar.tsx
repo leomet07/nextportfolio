@@ -21,20 +21,15 @@ function Navbar() {
 						styles.link_container + " " + styles.additional_link
 					}
 				>
-					<Link href="/jobs">/jobs</Link>
-				</div>
-				<div
-					className={
-						styles.link_container + " " + styles.additional_link
-					}
-				>
 					<Link href="/donate">/donate</Link>
 				</div>
 			</nav>
 			<div id={styles.socials}>
-				<a href="https://github.com/leomet07">
-					<SiGithub />
-				</a>
+				<div id={styles.github_link}>
+					<a href="https://github.com/leomet07">
+						<SiGithub />
+					</a>
+				</div>
 			</div>
 		</div>
 	);

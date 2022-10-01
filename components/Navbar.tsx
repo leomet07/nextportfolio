@@ -26,7 +26,7 @@ function Navbar() {
 			</nav>
 			<div id={styles.socials}>
 				<div id={styles.github_link}>
-					<a href="https://github.com/leomet07">
+					<a aria-label="Github" href="https://github.com/leomet07">
 						<SiGithub />
 					</a>
 				</div>

@@ -1,0 +1,42 @@
+.main {
+	/* Set the minimum height to be the entire page except for the navbar and its margin */
+	min-height: calc(100vh - (50px + 20px));
+
+	width: 100%;
+	padding-top: 20px;
+}
+
+.title {
+	font-size: 3rem;
+	margin-bottom: 15px;
+}
+
+.main p {
+	font-size: 1.25rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+@media (max-width: 440px) {
+	.title {
+		font-size: 2.5rem;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 340px) {
+	.title {
+		font-size: 2.25rem;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 305px) {
+	.title {
+		font-size: 2rem;
+		margin-bottom: 15px;
+	}
+}
+
+.main p a {
+	text-decoration: underline;
+}

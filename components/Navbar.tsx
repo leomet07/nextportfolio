@@ -16,13 +16,6 @@ function Navbar() {
 				>
 					<Link href="/projects">/projects</Link>
 				</div>
-				<div
-					className={
-						styles.link_container + " " + styles.additional_link
-					}
-				>
-					<Link href="/donate">/donate</Link>
-				</div>
 			</nav>
 			<div id={styles.socials}>
 				<div id={styles.github_link}>

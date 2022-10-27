@@ -6,9 +6,17 @@
 	padding-top: 20px;
 }
 
+#titles_container {
+	margin-bottom: 20px;
+}
+
 .title {
 	font-size: 3rem;
-	margin-bottom: 15px;
+	line-height: 0.8;
+}
+
+#pronouns {
+	font-size: 1.5rem;
 }
 
 .main p {
@@ -16,23 +24,40 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
+.main a {
+	text-decoration: underline;
+}
 @media (max-width: 440px) {
 	.title {
 		font-size: 2.5rem;
-		margin-bottom: 15px;
 	}
 }
 
 @media (max-width: 340px) {
 	.title {
 		font-size: 2.25rem;
-		margin-bottom: 15px;
 	}
 }
 
 @media (max-width: 305px) {
 	.title {
 		font-size: 2rem;
-		margin-bottom: 15px;
 	}
+}
+
+#other_info_container {
+	margin-top: 15px;
+	font-size: 1.25rem;
+}
+
+#location_container {
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+#location_pin {
+	height: 30px;
+	width: auto;
+	margin-right: 8px;
 }

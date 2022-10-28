@@ -1,0 +1,18 @@
+.main {
+	/* Set the minimum height to be the entire page except for the navbar and its margin */
+	min-height: calc(100vh - (50px + 20px));
+
+	width: 100%;
+	padding-top: 20px;
+}
+
+.title {
+	font-size: 3rem;
+	margin-bottom: 15px;
+}
+
+#go_home_link {
+	font-weight: bold;
+	font-size: 1.75rem;
+	text-decoration: underline;
+}

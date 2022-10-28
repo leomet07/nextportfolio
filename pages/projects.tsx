@@ -14,7 +14,8 @@ const Projects = () => {
 				<p>None have been displayed yet...</p>
 				<p>
 					Check Lenny&apos;{" "}
-					<a href="https://github.com/leomet07">github</a> out though!
+					<a href="https://github.com/leomet07">GitHub</a> for his
+					work though!
 				</p>
 			</main>
 		</div>

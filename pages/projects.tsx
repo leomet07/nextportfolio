@@ -1,15 +1,15 @@
 import Head from "next/head";
 import styles from "../styles/Projects.module.css";
 import { GetStaticProps } from "next";
-import getServerUrl from "../lib/getServerUrl";
 import { ReceivedProject } from "../types/db_types";
 import DisplayedProject from "../components/DisplayedProject";
+import dbConnect from "../lib/dbConnect";
+import getProjects from "../helpers/get_projects_helper";
 
 interface Props {
 	projects: ReceivedProject[];
 }
 const Projects = (props: Props) => {
-	console.log(props.projects);
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -41,18 +41,12 @@ const Projects = (props: Props) => {
 	);
 };
 
-type getProjectsResponse = {
-	success: boolean;
-	projects: ReceivedProject[];
-};
-
 export const getStaticProps: GetStaticProps = async (context) => {
-	const request: any = await fetch(getServerUrl() + "/api/get_projects");
-	const r_json: getProjectsResponse = await request.json();
-
+	await dbConnect();
+	const db_projects = await getProjects();
 	return {
 		props: {
-			projects: r_json.projects,
+			projects: db_projects,
 		},
 	};
 };

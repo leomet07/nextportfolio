@@ -3,6 +3,7 @@ import styles from "../styles/Projects.module.css";
 import { GetStaticProps } from "next";
 import getServerUrl from "../lib/getServerUrl";
 import { ReceivedProject } from "../types/db_types";
+import DisplayedProject from "../components/DisplayedProject";
 
 interface Props {
 	projects: ReceivedProject[];
@@ -20,13 +21,13 @@ const Projects = (props: Props) => {
 				<h1 className={styles.title}>Lenny&apos;s Projects</h1>
 				<section id={styles.projects_display}>
 					{props.projects.map((project) => (
-						<div key={String(project._id)}>
-							<h2>{project.name}</h2>
-							<p
-								dangerouslySetInnerHTML={{
-									__html: project.description,
-								}}
-							></p>
+						<div
+							key={String(project._id)}
+							className={styles.project_bubble}
+						>
+							<DisplayedProject
+								project={project}
+							></DisplayedProject>
 						</div>
 					))}
 				</section>

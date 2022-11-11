@@ -31,11 +31,11 @@ const Projects = (props: Props) => {
 						</div>
 					))}
 				</section>
-				<p>
-					Check Lenny&apos;{" "}
-					<a href="https://github.com/leomet07">GitHub</a> for his
-					work though!
-				</p>
+				<h2 id={styles.more_work}>
+					Check out my{" "}
+					<a href="https://github.com/leomet07">GitHub</a> for more
+					work!
+				</h2>
 			</main>
 		</div>
 	);

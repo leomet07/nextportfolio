@@ -67,3 +67,11 @@
 		grid-template-columns: repeat(1, 100%);
 	}
 }
+
+#more_work {
+	margin-bottom: 15vh;
+}
+
+#more_work a {
+	text-decoration: underline;
+}

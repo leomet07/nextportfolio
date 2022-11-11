@@ -12,6 +12,10 @@ My portfolio website, redesigned with NEXTjs.
 
 **Hosting:** Vercel
 
+**Analytics:** [Umami](https://umami.is/)
+
+Why? Because Google Analytics should be (and in some places is) illegal.
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file

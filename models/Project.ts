@@ -30,6 +30,10 @@ const projectSchema = new mongoose.Schema({
 	index: {
 		type: Number,
 	},
+	public: {
+		type: Boolean,
+		required: true,
+	},
 });
 
 const projectModel =

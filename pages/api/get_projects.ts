@@ -19,7 +19,9 @@ export default async function handler(
 	switch (method) {
 		case "GET":
 			try {
-				let db_projects = (await Project.find({})) as ReceivedProject[];
+				let db_projects = (await Project.find({
+					public: true,
+				})) as ReceivedProject[];
 
 				db_projects = db_projects.sort((a, b) => a.index - b.index);
 

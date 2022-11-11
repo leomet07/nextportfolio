@@ -5,7 +5,7 @@ import { ReceivedProject } from "../../types/db_types";
 
 type ResponseData = {
 	success: boolean;
-	data?: ReceivedProject[];
+	projects?: ReceivedProject[];
 };
 
 export default async function handler(
@@ -23,7 +23,7 @@ export default async function handler(
 
 				db_projects = db_projects.sort((a, b) => a.index - b.index);
 
-				res.status(200).json({ success: true, data: db_projects });
+				res.status(200).json({ success: true, projects: db_projects });
 				break;
 			} catch (error) {
 				console.error(error);

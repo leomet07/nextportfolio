@@ -22,7 +22,7 @@ const Home = () => {
 						a 15 year old student at Stuyvesant High School. I
 						currently do full-stack development, but I&apos;m very
 						passionate about computer science and I have experience
-						in many varying fields.
+						in various fields.
 					</p>
 					<p>
 						During the last couple of years, I&apos;ve been working
@@ -52,7 +52,7 @@ const Home = () => {
 					<p>
 						However, I still have many side projects, such as my
 						personal blog or this personal portfolio site. I have
-						many projects, but they range from mobile apps to
+						many projects, and they range from mobile apps to
 						computer vision and analytics systems.
 					</p>
 					<p>

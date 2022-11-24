@@ -7,18 +7,24 @@ interface Props {
 }
 
 function DisplayedProject(props: Props) {
+	const chosen_url = props.project.web_url || props.project.gh_url;
 	return (
 		<div id={styles.project_container}>
 			<div>
-				<div id={styles.image_container}>
-					<Image
-						id={styles.image}
-						alt={props.project.name + " Image"}
-						src={props.project.images[0]}
-						fill
-					/>
-				</div>
-				<h2>{props.project.name}</h2>
+				<a href={chosen_url}>
+					<div id={styles.image_container}>
+						<Image
+							id={styles.image}
+							alt={props.project.name + " Image"}
+							src={props.project.images[0]}
+							fill
+						/>
+					</div>
+				</a>
+				<a id={styles.name_link} href={chosen_url}>
+					<h2>{props.project.name}</h2>
+				</a>
+
 				<p
 					dangerouslySetInnerHTML={{
 						__html: props.project.description,

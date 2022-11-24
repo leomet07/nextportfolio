@@ -17,3 +17,7 @@
 	object-fit: cover;
 	aspect-ratio: 16/9;
 }
+
+#name_link {
+	text-decoration: underline;
+}

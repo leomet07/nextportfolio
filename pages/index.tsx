@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { MdLocationPin } from "react-icons/md";
 import { SiBuymeacoffee } from "react-icons/si";
+import { HiOutlineNewspaper } from "react-icons/hi";
 
 const Home = () => {
 	return (
@@ -69,6 +70,10 @@ const Home = () => {
 					</p>
 				</section>
 				<section id={styles.other_info_container}>
+					<a href="/resume.pdf" className={styles.line_container}>
+						<HiOutlineNewspaper className={styles.line_icon} />
+						My resume
+					</a>
 					<div className={styles.line_container}>
 						<MdLocationPin className={styles.line_icon} /> New York
 						City

@@ -4,7 +4,7 @@ My portfolio website, redesigned with NEXTjs.
 
 ## Production
 
-[**lennynextportfolio.vercel.app**](https://lennynextportfolio.vercel.app)
+[**lennym.dev**](https://lennym.dev)
 
 ## Tech Stack
 

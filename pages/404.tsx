@@ -12,7 +12,7 @@ const fourzerofour = () => {
 			<main className={styles.main}>
 				<h1 className={styles.title}>404! Page not found...</h1>
 				<Link href="/">
-					<a id={styles.go_home_link}>Go back home...</a>
+					<span id={styles.go_home_link}>Go back home...</span>
 				</Link>
 			</main>
 		</div>

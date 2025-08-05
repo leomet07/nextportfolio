@@ -20,8 +20,8 @@ const Home = () => {
 				<section>
 					<p>
 						My name is Leonid, but everyone calls me Lenny! I&apos;m
-						a 16 year old student at Stuyvesant High School. I
-						currently do full-stack development, but I&apos;m very
+						a 18 year old student at Cornell University. I
+						currently work as a data scientist, and I used to work as a full-stack developer. I&apos;m very
 						passionate about computer science and I have experience
 						in various fields.
 					</p>

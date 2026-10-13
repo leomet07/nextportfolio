@@ -19,7 +19,7 @@ const Home = () => {
 				</section>
 				<section>
 					<p>
-						I&apos;m Lenny, and I'm a third year{" "}
+						I&apos;m Lenny, and I&apos;m a third year{" "}
 						<a href="https://cals.cornell.edu/environmental-engineering">
 							environmental engineering
 						</a>{" "}
@@ -48,12 +48,12 @@ const Home = () => {
 						within cities.
 					</p>
 					<p>
-						At Cornell, I'm researching to better understand mercury
+						At Cornell, I&apos;m researching to better understand mercury
 						cycling within ecosystems at Dr. Gerson&apos;s{" "}
 						<a href="https://gersonlab.weebly.com/">
 							Watershed Biogeochemistry in the Anthropocene Lab
 						</a>
-						, and I'm also the lead of the{" "}
+						, and I&apos;m also the lead of the{" "}
 						<a href="https://cornellgeodata.com">Cornell GeoData</a>
 						, an university project team that builds low-cost
 						sensors to assess environmental trends within Tompkins

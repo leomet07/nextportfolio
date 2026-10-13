@@ -14,9 +14,10 @@
 	font-size: 1.6rem;
 	display: flex;
 	align-items: center;
+	gap: 1rem;
 }
 
-#github_link {
+#socials > {
 	/* Push github logo down slightly as it renders 7px too high up even when centered */
 	margin-top: 7px;
 }

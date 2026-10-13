@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
-import { SiGithub } from "react-icons/si";
+import { SiGithub, SiOrcid, SiLinkedin } from "react-icons/si";
 
 function Navbar() {
 	return (
@@ -18,6 +18,22 @@ function Navbar() {
 				</div>
 			</nav>
 			<div id={styles.socials}>
+				<div id={styles.linkedin_link}>
+					<a
+						aria-label="LinkedIn"
+						href="https://www.linkedin.com/in/leonid-metlitsky/"
+					>
+						<SiLinkedin />
+					</a>
+				</div>
+				<div id={styles.orcid_link}>
+					<a
+						aria-label="Orcid"
+						href="https://orcid.org/0009-0008-6423-6334"
+					>
+						<SiOrcid />
+					</a>
+				</div>
 				<div id={styles.github_link}>
 					<a aria-label="Github" href="https://github.com/leomet07">
 						<SiGithub />

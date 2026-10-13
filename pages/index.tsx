@@ -19,54 +19,45 @@ const Home = () => {
 				</section>
 				<section>
 					<p>
-						My name is Leonid, but everyone calls me Lenny! I&apos;m
-						a 18 year old student at Cornell University. I
-						currently work as a data scientist, and I used to work as a full-stack developer. I&apos;m very
-						passionate about computer science and I have experience
-						in various fields.
+						I&apos;m Lenny, and I'm a third year{" "}
+						<a href="https://cals.cornell.edu/environmental-engineering">
+							environmental engineering
+						</a>{" "}
+						student at Cornell University&apos;s College of
+						Agriculture and Life Sciences. I&apos;m interested in
+						using climate modeling techniques to understand how
+						environmental change will affect people&apos;s lives
+						across the world.
 					</p>
 					<p>
-						During the last couple of years, I&apos;ve been working
-						on many full-stack projects and learning about the web
-						development field as a whole. I&apos;ve used many JS
-						frameworks (React, Vue, Svelte, Angular, etc), but my
-						favorite one is NEXTjs. I&apos;m using NEXTjs for my
-						this site and most of my current projects.
-					</p>
-					<p>
-						Currently, much of my work is for the various aspects of
-						my Stuyvesant life. I&apos;ve done web development for
-						my school&apos;s newspaper (
-						<a href="https://stuyspec.com">
-							The Stuyvesant Spectator
+						After spending many years in my youth and early career
+						studying computer science and interning as a data
+						scientist, I first began environmental modeling work at
+						the <a>NASA Climate Change Research Initiative</a>,
+						where I worked to develop a{" "}
+						<a href="https://www.giss.nasa.gov/pubs/abs/gr05210v.html">
+							machine learning model to predict Harmful Algal
+							Blooms
 						</a>
-						), my school&apos;s{" "}
-						<a href="https://stuysu.org">student union</a> and the{" "}
-						<a href="https://sophomore.stuysu.org">
-							freshman/sophomore caucus
+						. Since then, I&apos;ve also broadened my research to{" "}
+						<a href="https://doi.org/10.1016/j.buildenv.2026.115327">
+							forecast extreme heat within cities underground
 						</a>
-						, my school computer science classes, and clubs!
-						I&apos;m the co-president and co-founder of{" "}
-						<a href="https://stuylinux.org">Stuy Linux</a>, my
-						school&apos;s first club about free software and Linux.
+						, and I&apos;m developing a new model to downscale
+						high-resolution, high-frequency temperature data for use
+						within cities.
 					</p>
 					<p>
-						However, I still have many side projects, such as my
-						personal blog or this personal portfolio site. I have
-						many projects, and they range from mobile apps to
-						computer vision and analytics systems.
-					</p>
-					<p>
-						I participate in many hackathons, and my{" "}
-						<a href="https://github.com/leomet07">GitHub</a> and{" "}
-						<a href="https://devpost.com/leomet07">Devpost</a> have
-						many entries (with many victories too!)
-					</p>
-					<p>
-						Outside of my passion for web development and my
-						experience, I have been learning about operating
-						systems, Linux, and the free software that makes it all
-						possible.
+						At Cornell, I'm researching to better understand mercury
+						cycling within ecosystems at Dr. Gerson&apos;s{" "}
+						<a href="https://gersonlab.weebly.com/">
+							Watershed Biogeochemistry in the Anthropocene Lab
+						</a>
+						, and I'm also the lead of the{" "}
+						<a href="https://cornellgeodata.com">Cornell GeoData</a>
+						, an university project team that builds low-cost
+						sensors to assess environmental trends within Tompkins
+						County and the broader surrounding region.
 					</p>
 				</section>
 				<section id={styles.other_info_container}>

@@ -7,14 +7,21 @@ function Navbar() {
 		<div id={styles.navbar_container}>
 			<nav id={styles.navbar}>
 				<div className={styles.link_container}>
-					<Link href="/">/</Link>
+					<Link href="/">home</Link>
 				</div>
 				<div
 					className={
 						styles.link_container + " " + styles.additional_link
 					}
 				>
-					<Link href="/projects">/projects</Link>
+					<Link href="/projects">projects</Link>
+				</div>
+				<div
+					className={
+						styles.link_container + " " + styles.additional_link
+					}
+				>
+					<Link href="/publications">publications</Link>
 				</div>
 			</nav>
 			<div id={styles.socials}>

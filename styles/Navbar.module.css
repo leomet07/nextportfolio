@@ -6,20 +6,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-right: 10px;
-	padding-left: 10px;
-}
-#socials {
-	height: 100%;
-	font-size: 1.6rem;
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-}
-
-#socials > {
-	/* Push github logo down slightly as it renders 7px too high up even when centered */
-	margin-top: 7px;
 }
 
 #navbar {
@@ -30,14 +16,35 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 1.5rem;
 }
 
 .link_container {
 	text-decoration: underline;
 }
 
+#socials {
+	height: 100%;
+	font-size: 1.6rem;
+	display: flex;
+	gap: 1rem;
+}
+
+#socials > {
+	/* Push logos down slightly as it renders 7px too high up even when centered */
+	margin-top: 7px;
+}
+
 @media (max-width: 550px) {
 	#navbar_container {
 		font-size: 1.2rem;
+		display: block;
+		height: fit-content;
+		max-height: none;
+	}
+
+	#navbar,
+	#socials {
+		margin-block: 1rem;
 	}
 }

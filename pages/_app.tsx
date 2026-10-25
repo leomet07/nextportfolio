@@ -17,12 +17,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<div id="page_container">
 					<Component {...pageProps} />
 				</div>
-				<Script
+				{/* <Script
 					async
 					defer
 					data-website-id="c100c974-039d-4bc2-978e-c3d0a224a766"
 					src="https://umami-fork-alpha.vercel.app/umami.js"
-				></Script>
+				></Script> */}
 			</div>
 		</>
 	);

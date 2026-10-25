@@ -1,0 +1,27 @@
+.main {
+	/* Set the minimum height to be the entire page except for the navbar and its margin */
+	min-height: calc(100vh - (50px + 20px));
+	padding-top: 20px;
+}
+
+.main a {
+	text-decoration: underline;
+}
+
+.publications {
+	list-style: none;
+	margin: 15px 0;
+}
+
+.publication {
+	margin-bottom: 25px;
+}
+
+.publication h2 {
+	font-size: 1.4rem;
+	margin-bottom: 5px;
+}
+
+.publication p {
+	margin-bottom: 3px;
+}

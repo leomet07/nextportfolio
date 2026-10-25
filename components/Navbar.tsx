@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
-import { SiGithub, SiOrcid, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiOrcid } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 
 function Navbar() {
 	return (
@@ -30,7 +31,7 @@ function Navbar() {
 						aria-label="LinkedIn"
 						href="https://www.linkedin.com/in/leonid-metlitsky/"
 					>
-						<SiLinkedin />
+						<FaLinkedin />
 					</a>
 				</div>
 				<div id={styles.orcid_link}>

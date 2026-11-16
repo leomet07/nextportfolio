@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "../styles/DisplayedProject.module.css";
-import { ReceivedProject } from "../types/db_types";
+import { Project } from "../types/project";
 
 interface Props {
-	project: ReceivedProject;
+	project: Project;
 }
 
 function DisplayedProject(props: Props) {

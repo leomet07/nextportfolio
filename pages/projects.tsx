@@ -1,13 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Projects.module.css";
 import { GetStaticProps } from "next";
-import { ReceivedProject } from "../types/db_types";
+import { Project } from "../types/project";
 import DisplayedProject from "../components/DisplayedProject";
-import dbConnect from "../lib/dbConnect";
-import getProjects from "../helpers/get_projects_helper";
+import getProjects from "../lib/projects";
 
 interface Props {
-	projects: ReceivedProject[];
+	projects: Project[];
 }
 const Projects = (props: Props) => {
 	return (
@@ -22,7 +21,7 @@ const Projects = (props: Props) => {
 				<section id={styles.projects_display}>
 					{props.projects.map((project) => (
 						<div
-							key={String(project._id)}
+							key={project.slug}
 							className={styles.project_bubble}
 						>
 							<DisplayedProject
@@ -41,12 +40,12 @@ const Projects = (props: Props) => {
 	);
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
-	await dbConnect();
-	const db_projects = await getProjects();
+// Runs at build time only: the markdown files are read and rendered to HTML here,
+// so neither the files nor the markdown libraries reach the browser.
+export const getStaticProps: GetStaticProps<Props> = async () => {
 	return {
 		props: {
-			projects: db_projects,
+			projects: getProjects(),
 		},
 	};
 };

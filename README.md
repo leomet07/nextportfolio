@@ -16,11 +16,25 @@ My portfolio website, redesigned with NEXTjs.
 
 Why? Because Google Analytics should be (and in some places is) illegal.
 
-## Environment Variables
+## Projects
 
-To run this project, you will need to add the following environment variables to your .env file
+Each project on `/projects` is a markdown file in `content/projects/`. The frontmatter holds the fields, and the body is the description (inline markdown; HTML is allowed too, e.g. `<a href="..." target="_blank">`).
 
-`MONGODB_URI`
+```md
+---
+name: Genfolio
+index: -3 # lower shows first
+public: true # false hides it
+web_url: https://genfolio.xyz/ # optional; the card links here, else to gh_url
+gh_url: https://github.com/leomet07/genfolio # optional
+images: # only the first is shown
+  - /img/genfolio/homepage.png
+---
+
+[Genfolio](https://devpost.com/software/genfolio) was the first place winning project ...
+```
+
+The files are read and rendered to HTML at build time (`lib/projects.ts`), so the page stays fully static.
 
 ## Run Locally
 

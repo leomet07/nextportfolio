@@ -18,23 +18,19 @@ Why? Because Google Analytics should be (and in some places is) illegal.
 
 ## Projects
 
-Each project on `/projects` is a markdown file in `content/projects/`. The frontmatter holds the fields, and the body is the description (inline markdown; HTML is allowed too, e.g. `<a href="..." target="_blank">`).
+Every project on `/projects` is in `content/projects.md`, in the order they show on the site. The comment at the top of that file explains the format:
 
 ```md
----
-name: Genfolio
-index: -3 # lower shows first
-public: true # false hides it
-web_url: https://genfolio.xyz/ # optional; the card links here, else to gh_url
-gh_url: https://github.com/leomet07/genfolio # optional
-images: # only the first is shown
-  - /img/genfolio/homepage.png
----
+## Genfolio
+
+- web_url: https://genfolio.xyz/
+- gh_url: https://github.com/leomet07/genfolio
+- images: /img/genfolio/homepage.png, /img/genfolio/template.png
 
 [Genfolio](https://devpost.com/software/genfolio) was the first place winning project ...
 ```
 
-The files are read and rendered to HTML at build time (`lib/projects.ts`), so the page stays fully static.
+The file is read and rendered to HTML at build time (`lib/projects.ts`), so the page stays fully static.
 
 ## Run Locally
 

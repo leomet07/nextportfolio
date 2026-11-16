@@ -1,45 +1,54 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { marked } from "marked";
 import { Project } from "../types/project";
 
-// One markdown file per project: YAML frontmatter for the fields, body for the description.
-const PROJECTS_DIR = path.join(process.cwd(), "content", "projects");
+// Every project lives in this one file, in display order. Its top comment explains the format.
+const PROJECTS_FILE = path.join(process.cwd(), "content", "projects.md");
+const FIELDS = ["web_url", "gh_url", "images", "hidden"];
 
 function getProjects(): Project[] {
-	return fs
-		.readdirSync(PROJECTS_DIR)
-		.filter((file) => file.endsWith(".md"))
-		.map((file) => {
-			const raw = fs.readFileSync(path.join(PROJECTS_DIR, file), "utf8");
-			const { data, content } = matter(raw);
+	const sections = fs
+		.readFileSync(PROJECTS_FILE, "utf8")
+		.split(/^## /m)
+		.slice(1); // drop everything before the first project heading
 
-			if (
-				typeof data.name !== "string" ||
-				typeof data.index !== "number" ||
-				typeof data.public !== "boolean" ||
-				!Array.isArray(data.images) ||
-				data.images.length === 0
-			) {
-				throw new Error(
-					`content/projects/${file}: frontmatter needs name, index, public and at least one image`
-				);
+	return sections.flatMap((section) => {
+		const [heading, ...lines] = section.split("\n");
+		const name = heading.trim();
+
+		// The "- key: value" lines right after the heading are fields; the rest is the description.
+		const fields: Record<string, string> = {};
+		let i = 0;
+		for (; i < lines.length; i++) {
+			const line = lines[i].trim();
+			const field = /^- (\w+):\s*(.*)$/.exec(line);
+			if (field && FIELDS.includes(field[1])) {
+				fields[field[1]] = field[2].trim();
+			} else if (field) {
+				throw new Error(`content/projects.md, "${name}": unknown field "${field[1]}"`);
+			} else if (line !== "") {
+				break;
 			}
+		}
+		const description = lines.slice(i).join("\n").trim();
 
-			return { file, data, content };
-		})
-		.filter(({ data }) => data.public)
-		.map(({ file, data, content }) => {
-			const { public: _public, ...fields } = data;
-			return {
-				...(fields as Omit<Project, "slug" | "description">),
-				slug: file.replace(/\.md$/, ""),
-				// The description sits inside a <p>, so render inline markdown only (no <p> wrapper).
-				description: marked.parseInline(content.trim(), { async: false }),
-			};
-		})
-		.sort((a, b) => a.index - b.index || a.slug.localeCompare(b.slug));
+		if (!fields.images || !description) {
+			throw new Error(`content/projects.md, "${name}": needs an images field and a description`);
+		}
+		if (fields.hidden === "true") return [];
+
+		const project: Project = {
+			name,
+			// The description sits inside a <p>, so render inline markdown only (no <p> wrapper).
+			description: marked.parseInline(description, { async: false }),
+			images: fields.images.split(",").map((image) => image.trim()),
+		};
+		// Only set the links that exist: getStaticProps props can't contain undefined.
+		if (fields.web_url) project.web_url = fields.web_url;
+		if (fields.gh_url) project.gh_url = fields.gh_url;
+		return [project];
+	});
 }
 
 export default getProjects;

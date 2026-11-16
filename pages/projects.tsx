@@ -21,7 +21,7 @@ const Projects = (props: Props) => {
 				<section id={styles.projects_display}>
 					{props.projects.map((project) => (
 						<div
-							key={project.slug}
+							key={project.name}
 							className={styles.project_bubble}
 						>
 							<DisplayedProject

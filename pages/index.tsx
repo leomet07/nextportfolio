@@ -29,7 +29,7 @@ const Home = () => {
 	return (
 		<div className={styles.container}>
 			<Seo
-				title="Lenny Metlitsky | Environmental Engineer & Climate Modeling"
+				title="Lenny Metlitsky | Environmental Engineering & Climate Modeling"
 				description="Lenny Metlitsky is an environmental engineering student at Cornell specializing in climate modeling and machine learning."
 				path="/"
 				jsonLd={jsonLd}
@@ -60,8 +60,7 @@ const Home = () => {
 						<a href="https://www.giss.nasa.gov/edu/ccri/">
 							NASA Climate Change Research Initiative
 						</a>
-						,
-						where I worked to develop a{" "}
+						, where I worked to develop a{" "}
 						<a href="https://www.giss.nasa.gov/pubs/abs/gr05210v.html">
 							machine learning model to predict Harmful Algal
 							Blooms
@@ -75,16 +74,16 @@ const Home = () => {
 						within cities.
 					</p>
 					<p>
-						At Cornell, I&apos;m researching to better understand mercury
-						cycling within ecosystems at Dr. Gerson&apos;s{" "}
+						At Cornell, I&apos;m researching to better understand
+						mercury cycling within ecosystems at Dr. Gerson&apos;s{" "}
 						<a href="https://gersonlab.weebly.com/">
 							Watershed Biogeochemistry in the Anthropocene Lab
 						</a>
 						, and I&apos;m also the lead of the{" "}
 						<a href="https://cornellgeodata.com">Cornell GeoData</a>
-						, a university project team that builds low-cost
-						sensors to assess environmental trends within Tompkins
-						County and the broader surrounding region.
+						, a university project team that builds low-cost sensors
+						to assess environmental trends within Tompkins County
+						and the broader surrounding region.
 					</p>
 				</section>
 				<section id={styles.other_info_container}>

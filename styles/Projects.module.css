@@ -68,7 +68,11 @@
 	}
 }
 
+/* A <p> (it isn't a section heading), styled like the <h2> it used to be. */
 #more_work {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-top: 0;
 	margin-bottom: 15vh;
 }
 

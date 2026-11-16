@@ -124,7 +124,7 @@ I created this website for <i>The Spectator</i> to facilitate the collection of 
 
 ## Spectator Rewrite
 
-- web_url: https://stuyspec.vercel.app
+- web_url: https://stuyspec.com/
 - gh_url: https://github.com/stuyspec/stuyspec-rewrite
 - images: /img/stuyspec/2.png, /img/stuyspec/1.png, /img/stuyspec/3.png, /img/stuyspec/4.png
 

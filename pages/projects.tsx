@@ -1,9 +1,9 @@
-import Head from "next/head";
 import styles from "../styles/Projects.module.css";
 import { GetStaticProps } from "next";
 import { Project } from "../types/project";
 import DisplayedProject from "../components/DisplayedProject";
 import getProjects from "../lib/projects";
+import Seo from "../components/Seo";
 
 interface Props {
 	projects: Project[];
@@ -11,30 +11,32 @@ interface Props {
 const Projects = (props: Props) => {
 	return (
 		<div className={styles.container}>
-			<Head>
-				<title>Lenny&apos;s Projects</title>
-				<meta name="description" content="Lenny's projects" />
-			</Head>
+			<Seo
+				title="Projects | Lenny Metlitsky"
+				description="Projects by Lenny Metlitsky: cool corridor routing engine, satellite temperature downscaling, NYC subway heat models, algal bloom predictions, and a custom-made lake buoy."
+				path="/projects"
+			/>
 
 			<main className={styles.main}>
 				<h1 className={styles.title}>Lenny&apos;s Projects</h1>
 				<section id={styles.projects_display}>
-					{props.projects.map((project) => (
+					{props.projects.map((project, i) => (
 						<div
 							key={project.name}
 							className={styles.project_bubble}
 						>
 							<DisplayedProject
 								project={project}
+								isFirst={i === 0}
 							></DisplayedProject>
 						</div>
 					))}
 				</section>
-				<h2 id={styles.more_work}>
+				<p id={styles.more_work}>
 					Check out my{" "}
 					<a href="https://github.com/leomet07">GitHub</a> for more
 					work!
-				</h2>
+				</p>
 			</main>
 		</div>
 	);

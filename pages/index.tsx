@@ -1,16 +1,39 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { MdLocationPin } from "react-icons/md";
 import { SiBuymeacoffee } from "react-icons/si";
 import { HiOutlineNewspaper } from "react-icons/hi";
+import Seo from "../components/Seo";
+import { PROFILE_URLS, SITE_NAME, SITE_URL } from "../lib/site";
+
+// Tells search engines who the site is about, and which other profiles are the same person.
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{ "@type": "WebSite", name: SITE_NAME, url: SITE_URL + "/" },
+		{
+			"@type": "Person",
+			"@id": SITE_URL + "/#person",
+			name: SITE_NAME,
+			url: SITE_URL + "/",
+			affiliation: {
+				"@type": "CollegeOrUniversity",
+				name: "Cornell University",
+				url: "https://www.cornell.edu",
+			},
+			sameAs: Object.values(PROFILE_URLS),
+		},
+	],
+};
 
 const Home = () => {
 	return (
 		<div className={styles.container}>
-			<Head>
-				<title>Lenny Metlitsky</title>
-				<meta name="description" content="Lenny Metlitsky" />
-			</Head>
+			<Seo
+				title="Lenny Metlitsky | Environmental Engineer & Climate Modeling"
+				description="Lenny Metlitsky is an environmental engineering student at Cornell specializing in climate modeling and machine learning."
+				path="/"
+				jsonLd={jsonLd}
+			/>
 
 			<main className={styles.main}>
 				<section id={styles.titles_container}>
@@ -19,7 +42,7 @@ const Home = () => {
 				</section>
 				<section>
 					<p>
-						I&apos;m Lenny, and I&apos;m a third year{" "}
+						I&apos;m Lenny Metlitsky, and I&apos;m a third year{" "}
 						<a href="https://cals.cornell.edu/environmental-engineering">
 							environmental engineering
 						</a>{" "}
@@ -33,7 +56,11 @@ const Home = () => {
 						After spending many years in my youth and early career
 						studying computer science and interning as a data
 						scientist, I first began environmental modeling work at
-						the <a>NASA Climate Change Research Initiative</a>,
+						the{" "}
+						<a href="https://www.giss.nasa.gov/edu/ccri/">
+							NASA Climate Change Research Initiative
+						</a>
+						,
 						where I worked to develop a{" "}
 						<a href="https://www.giss.nasa.gov/pubs/abs/gr05210v.html">
 							machine learning model to predict Harmful Algal
@@ -55,7 +82,7 @@ const Home = () => {
 						</a>
 						, and I&apos;m also the lead of the{" "}
 						<a href="https://cornellgeodata.com">Cornell GeoData</a>
-						, an university project team that builds low-cost
+						, a university project team that builds low-cost
 						sensors to assess environmental trends within Tompkins
 						County and the broader surrounding region.
 					</p>

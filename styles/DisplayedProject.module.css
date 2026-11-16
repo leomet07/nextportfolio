@@ -1,10 +1,10 @@
-#project_container {
+.project_container {
 	height: 100%;
 	width: 100%;
 	padding: 10px;
 }
 
-#image_container {
+.image_container {
 	width: 100%;
 	aspect-ratio: 16/9;
 	position: relative;
@@ -12,12 +12,12 @@
 	margin-bottom: 15px;
 }
 
-#image {
+.image {
 	width: 100%;
 	object-fit: cover;
 	aspect-ratio: 16/9;
 }
 
-#name_link {
+.name_link {
 	text-decoration: underline;
 }

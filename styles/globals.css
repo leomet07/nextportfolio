@@ -1,20 +1,9 @@
-/* Importing the Ubuntu font in all of its weights */
-@font-face {
-	font-family: "Ubuntu";
-	font-weight: 400;
-	src: url("/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
-}
-@font-face {
-	font-family: "Ubuntu";
-	font-weight: 800;
-	src: url("/fonts/Ubuntu/Ubuntu-Bold.ttf") format("truetype");
-}
+/* The Ubuntu font is loaded with next/font in pages/_app.tsx. */
 
 html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: Ubuntu;
 }
 
 body {

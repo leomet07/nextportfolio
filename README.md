@@ -4,7 +4,7 @@ My portfolio website, redesigned with NEXTjs.
 
 ## Production
 
-[**lennym.dev**](https://lennym.dev)
+[**lennymetlitsky.com**](https://lennymetlitsky.com)
 
 ## Tech Stack
 

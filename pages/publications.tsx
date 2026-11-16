@@ -1,6 +1,7 @@
-import Head from "next/head";
 import styles from "../styles/Publications.module.css";
 import { GetStaticProps } from "next";
+import Seo from "../components/Seo";
+import { SITE_URL } from "../lib/site";
 
 const ORCID_ID = "0009-0008-6423-6334";
 const ORCID_API = `https://pub.orcid.org/v3.0/${ORCID_ID}`;
@@ -20,17 +21,53 @@ interface Props {
 }
 
 const MONTHS = [
-	"Jan", "Feb", "Mar", "Apr", "May", "Jun",
-	"Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+	"Jan",
+	"Feb",
+	"Mar",
+	"Apr",
+	"May",
+	"Jun",
+	"Jul",
+	"Aug",
+	"Sep",
+	"Oct",
+	"Nov",
+	"Dec",
 ];
+
+// Describes each paper to search engines: title, authors, date, journal and DOI.
+const publicationsJsonLd = (publications: Publication[]) => ({
+	"@context": "https://schema.org",
+	"@graph": publications.map((pub) => ({
+		"@type": "ScholarlyArticle",
+		headline: pub.title,
+		name: pub.title,
+		author: pub.authors.map((author) =>
+			author === MY_NAME
+				? { "@type": "Person", name: author, url: SITE_URL + "/" }
+				: { "@type": "Person", name: author },
+		),
+		datePublished: pub.year
+			? pub.month
+				? `${pub.year}-${String(pub.month).padStart(2, "0")}`
+				: String(pub.year)
+			: undefined,
+		isPartOf: pub.journal
+			? { "@type": "Periodical", name: pub.journal }
+			: undefined,
+		url: pub.url ?? undefined,
+	})),
+});
 
 const Publications = (props: Props) => {
 	return (
 		<div className={styles.container}>
-			<Head>
-				<title>Lenny Metlitsky&apos;s Publications</title>
-				<meta name="description" content="Lenny Metlitsky" />
-			</Head>
+			<Seo
+				title="Publications | Lenny Metlitsky"
+				description="Research published by Lenny Metlitsky, focusing on urban heat and hydrology."
+				path="/publications"
+				jsonLd={publicationsJsonLd(props.publications)}
+			/>
 			<main className={styles.main}>
 				<h1>Publications</h1>
 				<ul className={styles.publications}>
@@ -65,9 +102,8 @@ const Publications = (props: Props) => {
 					))}
 				</ul>
 				<p>
-					See my{" "}
-					<a href={`https://orcid.org/${ORCID_ID}`}>ORCID</a> for
-					the full record.
+					See my <a href={`https://orcid.org/${ORCID_ID}`}>ORCID</a>{" "}
+					for the full record.
 				</p>
 			</main>
 		</div>
@@ -92,7 +128,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			const work = await orcidFetch(`/work/${summary["put-code"]}`);
 			const date = summary["publication-date"];
 			const doi = group["external-ids"]["external-id"].find(
-				(id: any) => id["external-id-type"] === "doi"
+				(id: any) => id["external-id-type"] === "doi",
 			);
 
 			return {
@@ -108,13 +144,13 @@ export const getStaticProps: GetStaticProps = async () => {
 					.map((c: any) => c["credit-name"]?.value)
 					.filter(Boolean),
 			};
-		})
+		}),
 	);
 
 	// Most recent first
 	publications.sort(
 		(a, b) =>
-			(b.year ?? 0) - (a.year ?? 0) || (b.month ?? 0) - (a.month ?? 0)
+			(b.year ?? 0) - (a.year ?? 0) || (b.month ?? 0) - (a.month ?? 0),
 	);
 
 	return {

@@ -22,14 +22,14 @@ CoCo uses downscaled NASA satellite imagery to minimize heat exposure for pedest
 
 - images: /img/modis/1.png, /img/modis/2.png
 
-I developed a model that combines two satellite products to downscale spatial satellite imagery from a 1km to a 30m resolution up to 96x per day. My first case study was over Kuwait (Paper in progress), and our model has sinced been scaled to be available globally through a collaboration with Amazon AWS.
+I developed a model that combines two satellite products to downscale spatial satellite imagery from a 1km to a 30m resolution up to 96x per day. My first case study was over Kuwait (Paper in progress), and our model has since been scaled to be available globally through a collaboration with Amazon AWS.
 
 ## The Hive
 
 - web_url: https://thehive.boston
 - images: /img/thehive/1.png, /img/thehive/2.png, /img/thehive/3.png
 
-The Hive won Best Pitch Overall and 2nd place in the Exowatt track at the MIT Energy &amp; Climate Hack 2026. Inspired by bees, we designed a mesh architechture that can keep construction robots on remote solar sites coordinated when Wi-Fi drops, improving site productivity and green-energy production reliability.
+The Hive won Best Pitch Overall and 2nd place in the Exowatt track at the MIT Energy &amp; Climate Hack 2026. Inspired by bees, we designed a mesh architecture that can keep construction robots on remote solar sites coordinated when Wi-Fi drops, improving site productivity and green-energy production reliability.
 
 ## Mercury bioavailability in ponds
 
@@ -37,7 +37,7 @@ The Hive won Best Pitch Overall and 2nd place in the Exowatt track at the MIT En
 - images: /img/mercury_bioavailability/1.gif
 - hidden: true
 
-At Dr. Gerson's labratory, I learned standard environmental, as well as as biogeochemistry-specific, wet labratory techniques to assess how mercury becomes bioavilable from pond sediment. Through a series of sequential selective extractions, we analyzed for Total Hg on the Tekran 2600, which allowed me to assess variation between sample locations and sampling times.
+At Dr. Gerson's laboratory, I learned standard environmental, as well as biogeochemistry-specific, wet laboratory techniques to assess how mercury becomes bioavailable from pond sediment. Through a series of sequential selective extractions, we analyzed for Total Hg on the Tekran 2600, which allowed me to assess variation between sample locations and sampling times.
 
 ## De novo, not Novel
 
@@ -74,7 +74,7 @@ To share our subway heat study, I built an interactive map of platform and stree
 - web_url: https://doi.org/10.1016/j.buildenv.2026.115327
 - images: /img/subwaymodel/1.png, /img/subwaymodel/2.png
 
-Through a partnership with the CityTech and NASA, we measured heat at 112 NYC subway stations: 70% of platforms had a higher summer heat index than the street above. I helped build a machine learning model that forecasts platform temperatures (R² = 0.85), <a href="https://doi.org/10.1016/j.buildenv.2026.115327" target="_blank">published</a> in <i>Building and Environment</i>.
+Through a partnership with CityTech and NASA, we measured heat at 112 NYC subway stations: 70% of platforms had a higher summer heat index than the street above. I helped build a machine learning model that forecasts platform temperatures (R² = 0.85), <a href="https://doi.org/10.1016/j.buildenv.2026.115327" target="_blank">published</a> in <i>Building and Environment</i>.
 
 ## Hyperspectral Drone Imaging
 
@@ -168,7 +168,7 @@ This was the website and homepage for the <a href="https://freshman.stuysu.org" 
 - gh_url: https://github.com/leomet07/kinesis
 - images: /img/kinesis/main.jpg, /img/kinesis/covid.jpg, /img/kinesis/email.jpg
 
-Kinesis is the winning project for <a href="https://stuyhacks-xi.devpost.com/" target="_blank">StuyHacks XI</a>. It's a faster and more transparent way to contact trace for cafaterias and more.
+Kinesis is the winning project for <a href="https://stuyhacks-xi.devpost.com/" target="_blank">StuyHacks XI</a>. It's a faster and more transparent way to contact trace for cafeterias and more.
 
 ## BikePark
 
@@ -176,7 +176,7 @@ Kinesis is the winning project for <a href="https://stuyhacks-xi.devpost.com/" t
 - gh_url: https://github.com/leomet07/bikepark
 - images: /img/bikepark/home.png, /img/bikepark/preview.png
 
-A webapp designed to encorurage biking and carbon-free sustainable travel by providing all available bike parking locations.
+A webapp designed to encourage biking and carbon-free sustainable travel by providing all available bike parking locations.
 
 ## Water Leak Detector
 
@@ -221,7 +221,7 @@ This is a local tool for working with various types of playlists. It can convert
 - gh_url: https://github.com/leomet07/Pedestrian-Counting-Python
 - images: /img/pedestrain_counter/screenshot.png
 
-This is a simple 'app'/model than can detect pedestrians as they walk past a camera. This is/was deployed in a cafe doorframe recording pedestrians as they walk by. The counted data can be used for marketing/ other business analytics.
+This is a simple 'app'/model that can detect pedestrians as they walk past a camera. This is/was deployed in a cafe doorframe recording pedestrians as they walk by. The counted data can be used for marketing/ other business analytics.
 
 ## Mario with Pygame
 

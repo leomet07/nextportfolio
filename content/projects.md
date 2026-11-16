@@ -14,13 +14,13 @@ one-paragraph description in inline markdown (HTML works too, e.g. for target="_
 ## Cool Corridor Routing (CoCo)
 
 - web_url: https://coolcorridors.com
-- images: /img/coolcorridor/1.png, /img/coolcorridor/2.png
+- images: /img/coolcorridor/1.gif
 
 CoCo uses downscaled NASA satellite imagery to minimize heat exposure for pedestrians. I expanded it to seven cities, from New York to Dubai, with daily heat maps from our downscaling model, and we submitted it to <a href="https://prototypesforhumanity.com" target="_blank">Prototypes for Humanity</a>. As a finalist of the PFH program, I presented CoCo at their Dubai summit.
 
 ## MODIS LST Downscaling
 
-- images: /img/modis/1.png, /img/modis/2.png
+- images: /img/modis/1.jpg
 
 I developed a model that combines two satellite products to downscale spatial satellite imagery from a 1km to a 30m resolution up to 96x per day. My first case study was over Kuwait (Paper in progress), and our model has since been scaled to be available globally through a collaboration with Amazon AWS.
 
@@ -35,7 +35,6 @@ The Hive won Best Pitch Overall and 2nd place in the Exowatt track at the MIT En
 
 - web_url: https://gersonlab.weebly.com/
 - images: /img/mercury_bioavailability/1.gif
-- hidden: true
 
 At Dr. Gerson's laboratory, I learned standard environmental, as well as biogeochemistry-specific, wet laboratory techniques to assess how mercury becomes bioavailable from pond sediment. Through a series of sequential selective extractions, we analyzed for Total Hg on the Tekran 2600, which allowed me to assess variation between sample locations and sampling times.
 
@@ -43,7 +42,6 @@ At Dr. Gerson's laboratory, I learned standard environmental, as well as biogeoc
 
 - web_url: https://gersonlab.weebly.com/
 - images: /img/denovo/1.png
-- hidden: true
 
 In my first semester doing research at Dr. Gerson's Watershed Biogeochemistry in the Anthropocene lab at Cornell, I analyzed de novo waterbodies such as mining ponds, agricultural ponds, and stormwater ponds using GIS and other geospatial programs. Furthermore, I conducted a literature review, both manually and through the help of a custom-made literature review script, to provide evidence for a new paper on why <i>de novo</i> is a more accurate description than <i>novel</i> for these waterbodies.
 
@@ -128,7 +126,7 @@ I created this website for <i>The Spectator</i> to facilitate the collection of 
 - gh_url: https://github.com/stuyspec/stuyspec-rewrite
 - images: /img/stuyspec/2.png, /img/stuyspec/1.png, /img/stuyspec/3.png, /img/stuyspec/4.png
 
-This was the new rewritten website for [The Stuyvesant Spectator](https://en.wikipedia.org/wiki/The_Spectator_(Stuyvesant_High_School)). As a Spec Web developer, I was in charge of the development and migration of this site.
+This was the new rewritten website for [The Stuyvesant Spectator](<https://en.wikipedia.org/wiki/The_Spectator_(Stuyvesant_High_School)>). As a Spec Web developer, I was in charge of the development and migration of this site.
 
 ## Sophomore Caucus Site
 

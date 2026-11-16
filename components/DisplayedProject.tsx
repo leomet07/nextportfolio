@@ -18,6 +18,11 @@ function DisplayedProject(props: Props) {
 							alt={props.project.name + " Image"}
 							src={props.project.images[0]}
 							fill
+							// Cards are at most 400px wide with 10px padding, so the image is
+							// never wider than 380px. (A "vw" value here would make Next drop
+							// the srcset candidates under 640px.)
+							sizes="380px"
+							unoptimized={props.project.animated}
 						/>
 					</div>
 				</a>

@@ -4,7 +4,9 @@ Projects for /projects, shown in the order they appear in this file.
 Each project is a "## Name" heading, then its fields as "- key: value" lines, then a
 one-paragraph description in inline markdown (HTML works too, e.g. for target="_blank").
 
-  images   required, comma-separated, paths in public/; only the first one is shown
+  images   required, comma-separated, paths in public/; only the first one is shown.
+           Stills are resized and served as WebP automatically. For an animation, use
+           an animated .webp about 800px wide: Next can't resize those, so it's sent as-is.
   web_url  optional; the card links here, else to gh_url
   gh_url   optional
   hidden   optional; "true" keeps the project off the site (and skips the checks
@@ -14,7 +16,7 @@ one-paragraph description in inline markdown (HTML works too, e.g. for target="_
 ## Cool Corridor Routing (CoCo)
 
 - web_url: https://coolcorridors.com
-- images: /img/coolcorridor/1.gif
+- images: /img/coolcorridor/1.webp
 
 CoCo uses downscaled NASA satellite imagery to minimize heat exposure for pedestrians. I expanded it to seven cities, from New York to Dubai, with daily heat maps from our downscaling model, and we submitted it to <a href="https://prototypesforhumanity.com" target="_blank">Prototypes for Humanity</a>. As a finalist of the PFH program, I presented CoCo at their Dubai summit.
 
@@ -34,7 +36,7 @@ The Hive won Best Pitch Overall and 2nd place in the Exowatt track at the MIT En
 ## Mercury bioavailability in ponds
 
 - web_url: https://gersonlab.weebly.com/
-- images: /img/mercury_bioavailability/1.gif
+- images: /img/mercury_bioavailability/1.webp
 
 At Dr. Gerson's laboratory, I learned standard environmental, as well as biogeochemistry-specific, wet laboratory techniques to assess how mercury becomes bioavailable from pond sediment. Through a series of sequential selective extractions, we analyzed for Total Hg on the Tekran 2600, which allowed me to assess variation between sample locations and sampling times.
 

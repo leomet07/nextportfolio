@@ -7,6 +7,12 @@ import { Project } from "../types/project";
 const PROJECTS_FILE = path.join(process.cwd(), "content", "projects.md");
 const FIELDS = ["web_url", "gh_url", "images", "hidden"];
 
+// An extended WebP ("VP8X" chunk) with the animation flag set.
+function isAnimatedWebp(file: string): boolean {
+	const header = fs.readFileSync(file).subarray(0, 21);
+	return header.toString("ascii", 8, 16) === "WEBPVP8X" && (header[20] & 0x02) !== 0;
+}
+
 function getProjects(): Project[] {
 	const sections = fs
 		.readFileSync(PROJECTS_FILE, "utf8")
@@ -57,6 +63,8 @@ function getProjects(): Project[] {
 		// Only set the links that exist: getStaticProps props can't contain undefined.
 		if (fields.web_url) project.web_url = fields.web_url;
 		if (fields.gh_url) project.gh_url = fields.gh_url;
+		// Next can't resize animations, so the card loads an animated cover directly.
+		if (isAnimatedWebp(path.join(process.cwd(), "public", images[0]))) project.animated = true;
 		return [project];
 	});
 }

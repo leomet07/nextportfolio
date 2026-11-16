@@ -4,4 +4,5 @@ export interface Project {
 	images: string[];
 	gh_url?: string;
 	web_url?: string;
+	animated?: boolean; // the shown image is an animated WebP, so it's served as-is
 }

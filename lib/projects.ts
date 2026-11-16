@@ -33,16 +33,26 @@ function getProjects(): Project[] {
 		}
 		const description = lines.slice(i).join("\n").trim();
 
-		if (!fields.images || !description) {
-			throw new Error(`content/projects.md, "${name}": needs an images field and a description`);
-		}
+		// Hidden projects can be unfinished drafts, so only visible ones are checked.
 		if (fields.hidden === "true") return [];
+
+		const fail = (problem: string) => {
+			throw new Error(`content/projects.md, "${name}": ${problem}`);
+		};
+		if (!fields.images || !description) fail("needs an images field and a description");
+		const images = fields.images.split(",").map((image) => image.trim());
+		for (const image of images) {
+			if (!fs.existsSync(path.join(process.cwd(), "public", image))) fail(`image not found: public${image}`);
+		}
+		for (const url of [fields.web_url, fields.gh_url]) {
+			if (url && !/^https?:\/\//.test(url)) fail(`link must start with http(s)://: ${url}`);
+		}
 
 		const project: Project = {
 			name,
 			// The description sits inside a <p>, so render inline markdown only (no <p> wrapper).
 			description: marked.parseInline(description, { async: false }),
-			images: fields.images.split(",").map((image) => image.trim()),
+			images,
 		};
 		// Only set the links that exist: getStaticProps props can't contain undefined.
 		if (fields.web_url) project.web_url = fields.web_url;
